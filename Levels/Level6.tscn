@@ -1,0 +1,251 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Tiles/Tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://Levels/Game.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Blocker.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/StandardCam.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Ice.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Exit.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/CrateButton.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Crate.tscn" type="PackedScene" id=9]
+
+[node name="Level6" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Player" parent="." instance=ExtResource( 7 )]
+position = Vector2( 64, 128 )
+
+[node name="Camera2D" parent="." instance=ExtResource( 4 )]
+
+[node name="TileMap" type="TileMap" parent="."]
+z_index = -1
+tile_set = ExtResource( 1 )
+format = 1
+tile_data = PoolIntArray( 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 65550, 0, 0, 131072, 0, 0, 131073, 13, 0, 131074, 13, 0, 131075, 13, 0, 131076, 13, 0, 131077, 13, 0, 131078, 13, 0, 131079, 13, 0, 131080, 13, 0, 131081, 13, 0, 131082, 13, 0, 131083, 13, 0, 131084, 13, 0, 131085, 13, 0, 131086, 0, 0, 196608, 0, 0, 196609, 13, 0, 196610, 13, 0, 196611, 13, 0, 196612, 13, 0, 196613, 13, 0, 196614, 13, 0, 196615, 13, 0, 196616, 13, 0, 196617, 13, 0, 196618, 13, 0, 196619, 13, 0, 196620, 13, 0, 196621, 13, 0, 196622, 0, 0, 262144, 0, 0, 262145, 13, 0, 262146, 13, 0, 262147, 13, 0, 262148, 13, 0, 262149, 13, 0, 262150, 13, 0, 262151, 13, 0, 262152, 13, 0, 262153, 13, 0, 262154, 13, 0, 262155, 13, 0, 262156, 13, 0, 262157, 13, 0, 262158, 0, 0, 327680, 0, 0, 327681, 13, 0, 327682, 13, 0, 327683, 13, 0, 327684, 13, 0, 327685, 13, 0, 327686, 13, 0, 327687, 13, 0, 327688, 13, 0, 327689, 13, 0, 327690, 13, 0, 327691, 13, 0, 327692, 13, 0, 327693, 13, 0, 327694, 0, 0, 393216, 0, 0, 393217, 13, 0, 393218, 13, 0, 393219, 13, 0, 393220, 13, 0, 393221, 13, 0, 393222, 13, 0, 393223, 13, 0, 393224, 13, 0, 393225, 13, 0, 393226, 13, 0, 393227, 13, 0, 393228, 13, 0, 393229, 13, 0, 393230, 0, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0 )
+
+[node name="Exit" parent="." instance=ExtResource( 6 )]
+position = Vector2( 704, 256 )
+z_index = -1
+
+[node name="Crates" type="Node2D" parent="."]
+
+[node name="Crate" parent="Crates" instance=ExtResource( 9 )]
+position = Vector2( 320, 256 )
+
+[node name="IceBlocks" type="Node2D" parent="."]
+position = Vector2( 64, 0 )
+
+[node name="Ice" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 64, 320 )
+
+[node name="Ice2" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 192, 320 )
+
+[node name="Ice3" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 256, 320 )
+
+[node name="Ice4" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 320, 320 )
+
+[node name="Ice5" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 320, 192 )
+
+[node name="Ice7" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 256, 192 )
+
+[node name="Ice8" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 192, 192 )
+
+[node name="Ice9" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 64, 256 )
+
+[node name="Ice10" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 384, 256 )
+
+[node name="Ice11" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 384, 320 )
+
+[node name="Ice12" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 448, 320 )
+
+[node name="Ice13" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 512, 320 )
+
+[node name="Ice14" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 512, 256 )
+
+[node name="Ice15" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 320, 256 )
+
+[node name="Ice16" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 448, 192 )
+
+[node name="Ice17" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 384, 192 )
+
+[node name="Ice18" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 448, 256 )
+
+[node name="Ice19" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 576, 256 )
+
+[node name="Ice20" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 576, 320 )
+
+[node name="Ice21" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 640, 320 )
+
+[node name="Ice22" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 704, 320 )
+
+[node name="Ice23" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 704, 256 )
+
+[node name="Ice24" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 704, 192 )
+
+[node name="Ice25" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 640, 192 )
+
+[node name="Ice26" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 576, 192 )
+
+[node name="Ice27" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 768, 256 )
+
+[node name="Ice28" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 0, 320 )
+
+[node name="Ice29" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 0, 384 )
+
+[node name="Ice30" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 192, 256 )
+
+[node name="Ice31" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 128, 320 )
+
+[node name="Ice32" parent="IceBlocks" instance=ExtResource( 5 )]
+
+[node name="Ice33" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 128, 192 )
+
+[node name="Ice34" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 512, 192 )
+
+[node name="Ice35" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 0, 192 )
+
+[node name="Ice37" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 320, 128 )
+
+[node name="Ice38" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 256, 128 )
+
+[node name="Ice39" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 192, 128 )
+
+[node name="Ice40" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 512, 128 )
+
+[node name="Ice41" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 448, 128 )
+
+[node name="Ice42" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 384, 128 )
+
+[node name="Ice43" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 704, 128 )
+
+[node name="Ice44" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 640, 128 )
+
+[node name="Ice45" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 576, 128 )
+
+[node name="Ice46" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 128, 128 )
+
+[node name="Ice47" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 64, 128 )
+
+[node name="Ice49" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 320, 384 )
+
+[node name="Ice50" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 256, 384 )
+
+[node name="Ice51" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 192, 384 )
+
+[node name="Ice52" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 512, 384 )
+
+[node name="Ice53" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 448, 384 )
+
+[node name="Ice54" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 384, 384 )
+
+[node name="Ice55" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 704, 384 )
+
+[node name="Ice61" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 768, 320 )
+
+[node name="Ice62" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 768, 384 )
+
+[node name="Ice63" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 768, 192 )
+
+[node name="Ice64" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 768, 128 )
+
+[node name="Ice56" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 640, 384 )
+
+[node name="Ice57" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 576, 384 )
+
+[node name="Ice58" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 128, 384 )
+
+[node name="Ice59" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 64, 384 )
+
+[node name="Ice36" parent="IceBlocks" instance=ExtResource( 5 )]
+position = Vector2( 64, 192 )
+
+[node name="Blockers" type="Node2D" parent="."]
+z_index = -1
+
+[node name="Blocker" parent="Blockers" instance=ExtResource( 3 )]
+position = Vector2( 64, 320 )
+
+[node name="Blocker2" parent="Blockers" instance=ExtResource( 3 )]
+position = Vector2( 448, 192 )
+
+[node name="Blocker8" parent="Blockers" instance=ExtResource( 3 )]
+position = Vector2( 384, 320 )
+
+[node name="Blocker9" parent="Blockers" instance=ExtResource( 3 )]
+position = Vector2( 640, 128 )
+
+[node name="Blocker3" parent="Blockers" instance=ExtResource( 3 )]
+position = Vector2( 256, 192 )
+
+[node name="Blocker6" parent="Blockers" instance=ExtResource( 3 )]
+position = Vector2( 256, 384 )
+
+[node name="Blocker7" parent="Blockers" instance=ExtResource( 3 )]
+position = Vector2( 512, 256 )
+
+[node name="Blocker5" parent="Blockers" instance=ExtResource( 3 )]
+position = Vector2( 832, 256 )
+
+[node name="CrateButton" type="Node2D" parent="."]
+
+[node name="CrateButton2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 64, 256 )
